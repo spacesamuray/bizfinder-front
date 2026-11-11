@@ -208,7 +208,7 @@ window.BizfinderDemo = (function () {
     if (!sample)
       throw new ApiError(
         400,
-        'This preview has sample searches for flower shops, dentists, beauty salons and car repair. Search for one of those.',
+        'This preview has sample searches for pet shops, dentists, beauty salons and car repair. Search for one of those.',
       );
     const data = await dataset(sample.id);
     const cols = data.businesses.columns;

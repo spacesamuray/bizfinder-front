@@ -534,7 +534,7 @@ const SUGGESTIONS = [
   'cafe',
   'hotel',
   'car repair',
-  'flower shop',
+  'pet shop',
   'pharmacy',
   'gym',
   'law firm',

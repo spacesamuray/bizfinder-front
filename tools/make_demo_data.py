@@ -32,16 +32,16 @@ CITIES = {
 # id, what was searched, city, source, Google types, category names, businesses, other results, words that pick it
 DATASETS = [
     {
-        "id": "flower-shop",
-        "what": "flower shop",
+        "id": "pet-shop",
+        "what": "pet shop",
         "city": "Tbilisi",
         "source": "Google Maps",
         "generated": "2026-11-09 18:20",
-        "types": ["florist", "store"],
-        "categories": ["Florist", "Florist", "Florist", "Market"],
-        "names": ["Petal & Stem", "Bloom Corner", "Green Leaf Flowers", "Violet House", "Rosa Studio", "Lily Market", "Tulip Lane", "Orchid Room", "Daisy & Co", "Peony Point", "Sunflower Stand", "Magnolia", "Fern & Moss", "Little Garden", "Wild Poppy", "Iris Atelier", "Lavender Lane", "Camellia Corner", "Bouquet Box", "Blossom Bar", "Golden Tulip", "Rose Hill Flowers", "Stem Studio", "Flora Point"],
-        "others": [("City Mall", "Shopping mall"), ("Fresh Market", "Supermarket"), ("Home Decor Store", "Furniture store")],
-        "keywords": ["flower", "florist", "bouquet", "ყვავილ"],
+        "types": ["pet_store", "store"],
+        "categories": ["Pet store", "Pet store", "Pet store", "Pet supply store"],
+        "names": ["Paws & Claws", "Happy Tail", "Pet Planet", "Whisker House", "Golden Paw", "Zoo Market", "Tail Wag", "Fin & Feather", "Kitty & Co", "Pet Corner", "Bone & Bowl", "Little Ark", "Bark & Purr", "Pet Point", "Pawsome", "Pet Garden", "Puppy Love", "Feather Nest", "Pet Haven", "Aqua Pets", "Snout & Co", "Pet Lab", "Fluffy Store", "Paw Print"],
+        "others": [("City Mall", "Shopping mall"), ("Fresh Market", "Supermarket"), ("Vet Clinic Plus", "Veterinarian")],
+        "keywords": ["pet", "animal", "zoo", "ცხოველ", "ზოო"],
     },
     {
         "id": "dentist",
@@ -84,7 +84,7 @@ DATASETS = [
 # Call notes already in the preview, so its call features have something to show. Each goes
 # to the next business with that kind of web presence, so the note fits the business.
 NOTES = {
-    "flower-shop": [
+    "pet-shop": [
         ("none", {"status": "Somewhat interested", "contacted": ["Call", "WhatsApp"], "response": "Likes the idea of a site. Send them the demo on WhatsApp."}),
         ("social", {"status": "Interested", "contacted": ["Call"], "response": "Only has Instagram. Wants prices for a small site."}),
         ("none", {"status": "No answer", "contacted": ["Call"]}),

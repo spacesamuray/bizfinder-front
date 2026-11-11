@@ -59,7 +59,7 @@ onScroll();
   const queryEl = $('[data-query]');
   const foundEl = $('[data-found]');
   const needEl = $('[data-need]');
-  const QUERIES = ['flower shop', 'dentist', 'beauty salon', 'car repair', 'pharmacy', 'law firm', 'bakery'];
+  const QUERIES = ['pet shop', 'dentist', 'beauty salon', 'car repair', 'pharmacy', 'law firm', 'bakery'];
   // Roughly how real searches turn out: most small businesses have no site of their own.
   const KINDS = [
     ['none', 0.45],
@@ -199,18 +199,18 @@ onScroll();
   const WAYS = ['Call', 'WhatsApp', 'Viber', 'Email', 'Instagram', 'Facebook', 'In person'];
   // Made-up businesses: every name, rating and note here is invented for the demo.
   const rows = [
-    { ways: ['Call', 'WhatsApp'], name: 'Petal & Stem', cat: 'Florist', kind: 'none', rating: 4.8, reviews: 63, email: false, call: 'Somewhat interested', note: 'Likes the idea of a site. Send them the demo on WhatsApp.', x: 41, y: 40 },
-    { ways: ['Call'], name: 'Bloom Corner', cat: 'Florist', kind: 'social', rating: 4.6, reviews: 41, email: false, call: 'Interested', note: 'Only has Instagram. Wants prices for a small site.', x: 55, y: 28 },
-    { name: 'Green Leaf Flowers', cat: 'Market', kind: 'own', rating: 4.9, reviews: 112, email: true, call: '', note: '', x: 64, y: 54 },
-    { ways: ['Call'], name: 'Violet House', cat: 'Florist', kind: 'none', rating: 4.7, reviews: 28, email: false, call: 'No answer', note: '', x: 29, y: 60 },
-    { ways: ['Call'], name: 'Rosa Studio', cat: 'Florist', kind: 'social', rating: 5.0, reviews: 19, email: true, call: 'Call back', note: 'Call after 6 pm, when the owner is in.', x: 47, y: 66 },
-    { name: 'Lily Market', cat: 'Market', kind: 'none', rating: 4.4, reviews: 87, email: false, call: '', note: '', x: 73, y: 37 },
-    { ways: ['Call', 'Email', 'In person'], name: 'Tulip Lane', cat: 'Florist', kind: 'broken', rating: 4.5, reviews: 54, email: true, call: 'Client', note: 'Their old site was down. The new one goes live next week.', x: 35, y: 24 },
-    { ways: ['Call'], name: 'Orchid Room', cat: 'Florist', kind: 'own', rating: 4.8, reviews: 76, email: true, call: 'Not interested', note: 'Happy with the site they have.', x: 58, y: 76 },
-    { name: 'Daisy & Co', cat: 'Market', kind: 'none', rating: 4.3, reviews: 35, email: false, call: '', note: '', x: 20, y: 44 },
-    { name: 'Peony Point', cat: 'Florist', kind: 'social', rating: 4.9, reviews: 48, email: false, call: '', note: '', x: 82, y: 62 },
-    { ways: ['Call'], name: 'Sunflower Stand', cat: 'Market', kind: 'none', rating: 4.2, reviews: 12, email: false, call: 'Wrong number', note: '', x: 68, y: 18 },
-    { name: 'Magnolia', cat: 'Florist', kind: 'own', rating: 4.7, reviews: 91, email: true, call: '', note: '', x: 50, y: 50 },
+    { ways: ['Call', 'WhatsApp'], name: 'Paws & Claws', cat: 'Pet store', kind: 'none', rating: 4.8, reviews: 63, email: false, call: 'Somewhat interested', note: 'Likes the idea of a site. Send them the demo on WhatsApp.', x: 41, y: 40 },
+    { ways: ['Call'], name: 'Happy Tail', cat: 'Pet store', kind: 'social', rating: 4.6, reviews: 41, email: false, call: 'Interested', note: 'Only has Instagram. Wants prices for a small site.', x: 55, y: 28 },
+    { name: 'Pet Planet', cat: 'Pet supplies', kind: 'own', rating: 4.9, reviews: 112, email: true, call: '', note: '', x: 64, y: 54 },
+    { ways: ['Call'], name: 'Whisker House', cat: 'Pet store', kind: 'none', rating: 4.7, reviews: 28, email: false, call: 'No answer', note: '', x: 29, y: 60 },
+    { ways: ['Call'], name: 'Golden Paw', cat: 'Pet store', kind: 'social', rating: 5.0, reviews: 19, email: true, call: 'Call back', note: 'Call after 6 pm, when the owner is in.', x: 47, y: 66 },
+    { name: 'Zoo Market', cat: 'Pet supplies', kind: 'none', rating: 4.4, reviews: 87, email: false, call: '', note: '', x: 73, y: 37 },
+    { ways: ['Call', 'Email', 'In person'], name: 'Tail Wag', cat: 'Pet store', kind: 'broken', rating: 4.5, reviews: 54, email: true, call: 'Client', note: 'Their old site was down. The new one goes live next week.', x: 35, y: 24 },
+    { ways: ['Call'], name: 'Fin & Feather', cat: 'Pet store', kind: 'own', rating: 4.8, reviews: 76, email: true, call: 'Not interested', note: 'Happy with the site they have.', x: 58, y: 76 },
+    { name: 'Kitty & Co', cat: 'Pet supplies', kind: 'none', rating: 4.3, reviews: 35, email: false, call: '', note: '', x: 20, y: 44 },
+    { name: 'Pet Corner', cat: 'Pet store', kind: 'social', rating: 4.9, reviews: 48, email: false, call: '', note: '', x: 82, y: 62 },
+    { ways: ['Call'], name: 'Bone & Bowl', cat: 'Pet supplies', kind: 'none', rating: 4.2, reviews: 12, email: false, call: 'Wrong number', note: '', x: 68, y: 18 },
+    { name: 'Little Ark', cat: 'Pet store', kind: 'own', rating: 4.7, reviews: 91, email: true, call: '', note: '', x: 50, y: 50 },
   ];
   const CHIPS = [
     { id: 'all', label: 'All', test: () => true },

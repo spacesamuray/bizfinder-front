@@ -1,20 +1,21 @@
 {
  "datasets": [
   {
-   "id": "flower-shop",
-   "file": "flower-shop_tbilisi-georgia_20261109-1820.xlsx",
-   "title": "flower shop in Tbilisi, Georgia",
-   "what": "flower shop",
+   "id": "pet-shop",
+   "file": "pet-shop_tbilisi-georgia_20261109-1820.xlsx",
+   "title": "pet shop in Tbilisi, Georgia",
+   "what": "pet shop",
    "where": "Tbilisi, Georgia",
    "source": "Google Maps",
    "generated": "2026-11-09 18:20",
    "found": 24,
    "others": 3,
    "keywords": [
-    "flower",
-    "florist",
-    "bouquet",
-    "ყვავილ"
+    "pet",
+    "animal",
+    "zoo",
+    "ცხოველ",
+    "ზოო"
    ]
   },
   {
@@ -81,10 +82,10 @@
   }
  ],
  "calls": {
-  "demo-flower-shop-01": {
-   "name": "Bloom Corner",
-   "phone": "5•• •• •• 17",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-01": {
+   "name": "Happy Tail",
+   "phone": "5•• •• •• 35",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "Somewhat interested",
    "contacted": [
@@ -101,10 +102,10 @@
    ],
    "contactedAt": "2026-11-09T18:20"
   },
-  "demo-flower-shop-03": {
-   "name": "Violet House",
-   "phone": "5•• •• •• 34",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-05": {
+   "name": "Zoo Market",
+   "phone": "5•• •• •• 49",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "Interested",
    "contacted": [
@@ -120,10 +121,10 @@
    ],
    "contactedAt": "2026-11-09T18:20"
   },
-  "demo-flower-shop-02": {
-   "name": "Green Leaf Flowers",
-   "phone": "5•• •• •• 91",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-02": {
+   "name": "Pet Planet",
+   "phone": "5•• •• •• 43",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "No answer",
    "contacted": [
@@ -138,10 +139,10 @@
    ],
    "contactedAt": "2026-11-09T18:20"
   },
-  "demo-flower-shop-07": {
-   "name": "Orchid Room",
-   "phone": "",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-11": {
+   "name": "Little Ark",
+   "phone": "5•• •• •• 62",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "Call back",
    "contacted": [
@@ -157,10 +158,10 @@
    ],
    "contactedAt": "2026-11-09T18:20"
   },
-  "demo-flower-shop-13": {
-   "name": "Little Garden",
-   "phone": "5•• •• •• 27",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-07": {
+   "name": "Fin & Feather",
+   "phone": "5•• •• •• 40",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "Client",
    "contacted": [
@@ -178,10 +179,10 @@
    ],
    "contactedAt": "2026-11-09T18:20"
   },
-  "demo-flower-shop-00": {
-   "name": "Petal & Stem",
-   "phone": "5•• •• •• 35",
-   "search": "flower shop in Tbilisi, Georgia",
+  "demo-pet-shop-00": {
+   "name": "Paws & Claws",
+   "phone": "5•• •• •• 82",
+   "search": "pet shop in Tbilisi, Georgia",
    "updatedAt": "2026-11-09T18:20",
    "status": "Not interested",
    "contacted": [
