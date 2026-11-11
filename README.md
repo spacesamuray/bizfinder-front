@@ -4,8 +4,7 @@ Bizfinder as a website people sign in to, instead of an app on your own computer
 folder is the whole front end: plain HTML, CSS and JavaScript, with no build step.
 
 **It's a preview for now.** There's no backend yet: signing in, call notes and searches all
-happen in the visitor's browser, with sample searches of made-up businesses. Every page
-says so where it matters.
+happen in the visitor's browser, with sample searches of made-up businesses.
 
 ## What's here
 
