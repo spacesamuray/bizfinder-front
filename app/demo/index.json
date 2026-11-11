@@ -1,0 +1,251 @@
+{
+ "datasets": [
+  {
+   "id": "flower-shop",
+   "file": "flower-shop_tbilisi-georgia_20261109-1820.xlsx",
+   "title": "flower shop in Tbilisi, Georgia",
+   "what": "flower shop",
+   "where": "Tbilisi, Georgia",
+   "source": "Google Maps",
+   "generated": "2026-11-09 18:20",
+   "found": 24,
+   "others": 3,
+   "keywords": [
+    "flower",
+    "florist",
+    "bouquet",
+    "ყვავილ"
+   ]
+  },
+  {
+   "id": "dentist",
+   "file": "dentist_tbilisi-georgia_20261108-1105.xlsx",
+   "title": "dentist in Tbilisi, Georgia",
+   "what": "dentist",
+   "where": "Tbilisi, Georgia",
+   "source": "Google Maps",
+   "generated": "2026-11-08 11:05",
+   "found": 26,
+   "others": 2,
+   "keywords": [
+    "dent",
+    "teeth",
+    "tooth",
+    "orthodont",
+    "სტომატ",
+    "კბილ"
+   ]
+  },
+  {
+   "id": "beauty-salon",
+   "file": "beauty-salon_batumi-georgia_20261106-1640.xlsx",
+   "title": "beauty salon in Batumi, Georgia",
+   "what": "beauty salon",
+   "where": "Batumi, Georgia",
+   "source": "Google Maps",
+   "generated": "2026-11-06 16:40",
+   "found": 20,
+   "others": 2,
+   "keywords": [
+    "beauty",
+    "salon",
+    "hair",
+    "nail",
+    "lash",
+    "barber",
+    "სილამაზ",
+    "სალონ"
+   ]
+  },
+  {
+   "id": "car-repair",
+   "file": "car-repair_kutaisi-georgia_20261104-0930.xlsx",
+   "title": "car repair in Kutaisi, Georgia",
+   "what": "car repair",
+   "where": "Kutaisi, Georgia",
+   "source": "TomTom",
+   "generated": "2026-11-04 09:30",
+   "found": 18,
+   "others": 0,
+   "keywords": [
+    "car",
+    "auto",
+    "repair",
+    "mechanic",
+    "garage",
+    "tyre",
+    "tire",
+    "ავტო",
+    "მანქან"
+   ]
+  }
+ ],
+ "calls": {
+  "demo-flower-shop-01": {
+   "name": "Bloom Corner",
+   "phone": "5•• •• •• 17",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "Somewhat interested",
+   "contacted": [
+    "Call",
+    "WhatsApp"
+   ],
+   "response": "Likes the idea of a site. Send them the demo on WhatsApp.",
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "Somewhat interested"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-flower-shop-03": {
+   "name": "Violet House",
+   "phone": "5•• •• •• 34",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "Interested",
+   "contacted": [
+    "Call"
+   ],
+   "response": "Only has Instagram. Wants prices for a small site.",
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "Interested"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-flower-shop-02": {
+   "name": "Green Leaf Flowers",
+   "phone": "5•• •• •• 91",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "No answer",
+   "contacted": [
+    "Call"
+   ],
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "No answer"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-flower-shop-07": {
+   "name": "Orchid Room",
+   "phone": "",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "Call back",
+   "contacted": [
+    "Call"
+   ],
+   "response": "Call after 6 pm, when the owner is in.",
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "Call back"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-flower-shop-13": {
+   "name": "Little Garden",
+   "phone": "5•• •• •• 27",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "Client",
+   "contacted": [
+    "Call",
+    "Email",
+    "In person"
+   ],
+   "response": "Their old site was down. The new one goes live next week.",
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "Client"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-flower-shop-00": {
+   "name": "Petal & Stem",
+   "phone": "5•• •• •• 35",
+   "search": "flower shop in Tbilisi, Georgia",
+   "updatedAt": "2026-11-09T18:20",
+   "status": "Not interested",
+   "contacted": [
+    "Call"
+   ],
+   "response": "Happy with the site they have.",
+   "improve": "Ask how their site works on phones first.",
+   "calledAt": "2026-11-09T18:20",
+   "history": [
+    {
+     "at": "2026-11-09T18:20",
+     "status": "Not interested"
+    }
+   ],
+   "contactedAt": "2026-11-09T18:20"
+  },
+  "demo-dentist-00": {
+   "name": "Smile Studio",
+   "phone": "5•• •• •• 83",
+   "search": "dentist in Tbilisi, Georgia",
+   "updatedAt": "2026-11-08T11:05",
+   "status": "Interested",
+   "contacted": [
+    "Call",
+    "Viber"
+   ],
+   "response": "Wants online booking. Send examples on Viber.",
+   "calledAt": "2026-11-08T11:05",
+   "history": [
+    {
+     "at": "2026-11-08T11:05",
+     "status": "Interested"
+    }
+   ],
+   "contactedAt": "2026-11-08T11:05"
+  },
+  "demo-dentist-10": {
+   "name": "Dental Art",
+   "phone": "5•• •• •• 40",
+   "search": "dentist in Tbilisi, Georgia",
+   "updatedAt": "2026-11-08T11:05",
+   "status": "Wrong number",
+   "contacted": [
+    "Call"
+   ],
+   "calledAt": "2026-11-08T11:05",
+   "history": [
+    {
+     "at": "2026-11-08T11:05",
+     "status": "Wrong number"
+    }
+   ],
+   "contactedAt": "2026-11-08T11:05"
+  },
+  "demo-dentist-01": {
+   "name": "Bright Dental",
+   "phone": "5•• •• •• 36",
+   "search": "dentist in Tbilisi, Georgia",
+   "updatedAt": "2026-11-08T11:05",
+   "contacted": [
+    "Instagram"
+   ],
+   "response": "Wrote to them on Instagram, no reply yet.",
+   "contactedAt": "2026-11-08T11:05"
+  }
+ }
+}

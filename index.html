@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bizfinder: find the businesses that still need a website</title>
+    <meta
+      name="description"
+      content="Bizfinder searches Google Maps or TomTom for any kind of business in a city, visits their websites for emails and social media, and turns it all into a spreadsheet and a call list."
+    />
+    <meta name="theme-color" content="#10261f" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <!-- Link previews. Once the page has its address, put the full address of the
+         image here (e.g. https://example.com/assets/social-preview.png): most apps need it. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bizfinder" />
+    <meta
+      property="og:description"
+      content="Find the businesses that still need a website: search a city, collect their emails and social pages, and work through them as a call list."
+    />
+    <meta property="og:image" content="assets/social-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" href="assets/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script src="auth.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Shapes reused on the page -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="wordmark" viewBox="5 -59 322 61"><path fill="currentColor" d="M31.16 1.37Q26.07 1.37 22.19 -0.8Q18.32 -2.96 16.11 -7.07Q13.91 -11.17 13.76 -17.1H15.2V0H5.55V-55.48H17.71V-27.28L14.82 -23.64Q15.05 -29.94 17.21 -34.24Q19.38 -38.53 23.18 -40.7Q26.98 -42.86 31.84 -42.86Q36.1 -42.86 39.56 -41.31Q43.02 -39.75 45.45 -36.9Q47.88 -34.05 49.21 -30.17Q50.54 -26.3 50.54 -21.74V-20.06Q50.54 -15.5 49.21 -11.63Q47.88 -7.75 45.33 -4.83Q42.79 -1.9 39.22 -0.27Q35.64 1.37 31.16 1.37ZM27.97 -8.82Q31.08 -8.82 33.4 -10.34Q35.72 -11.86 37.01 -14.63Q38.3 -17.4 38.3 -20.9Q38.3 -24.47 37.01 -27.13Q35.72 -29.79 33.4 -31.27Q31.08 -32.76 27.97 -32.76Q25.23 -32.76 22.8 -31.46Q20.37 -30.17 18.89 -27.78Q17.4 -25.38 17.4 -21.96V-19.15Q17.4 -15.88 18.96 -13.57Q20.52 -11.25 22.95 -10.03Q25.38 -8.82 27.97 -8.82Z M58.45 0V-41.65H70.61V0ZM52.9 -32.68V-41.65H70.61V-32.68ZM63.16 -45.75Q59.74 -45.75 58.11 -47.54Q56.48 -49.32 56.48 -52.06Q56.48 -54.87 58.11 -56.66Q59.74 -58.44 63.16 -58.44Q66.58 -58.44 68.22 -56.66Q69.85 -54.87 69.85 -52.06Q69.85 -49.32 68.22 -47.54Q66.58 -45.75 63.16 -45.75Z M76.62 0V-8.51L96.16 -31.92V-30.7L94.33 -32.98L95.7 -32.3H76.7V-41.65H109.46V-33.14L89.92 -9.73V-10.87L91.75 -8.59L90.38 -9.35H110.06V0Z" /><path fill="currentColor" d="M117.52 0V-42.64Q117.52 -49.4 121.09 -52.59Q124.66 -55.78 131.58 -55.78H136.6V-49.7H130.36Q127.55 -49.7 126.03 -48.15Q124.51 -46.59 124.51 -43.85V0ZM111.9 -34.66V-40.13H137.36V-34.66Z M144.58 0V-40.58H151.88V0ZM138.35 -34.81V-40.58H151.88V-34.81ZM146.64 -47.12Q144.2 -47.12 143.03 -48.41Q141.85 -49.7 141.85 -51.68Q141.85 -53.66 143.03 -54.95Q144.2 -56.24 146.64 -56.24Q149.07 -56.24 150.25 -54.95Q151.42 -53.66 151.42 -51.68Q151.42 -49.7 150.25 -48.41Q149.07 -47.12 146.64 -47.12Z M163.52 0V-40.58H169.29V-23.18H168.38Q168.38 -29.18 170.01 -33.33Q171.65 -37.47 174.99 -39.63Q178.34 -41.8 183.43 -41.8H183.73Q191.41 -41.8 195.09 -37.01Q198.78 -32.22 198.78 -23.18V0H191.48V-24.7Q191.48 -29.41 188.82 -32.26Q186.16 -35.11 181.53 -35.11Q176.74 -35.11 173.78 -32.15Q170.81 -29.18 170.81 -24.24V0Z M226.6 1.37Q222.27 1.37 218.62 -0.23Q214.98 -1.82 212.28 -4.71Q209.58 -7.6 208.1 -11.4Q206.62 -15.2 206.62 -19.61V-20.98Q206.62 -25.31 208.06 -29.11Q209.5 -32.91 212.13 -35.8Q214.75 -38.68 218.36 -40.32Q221.97 -41.95 226.38 -41.95Q231.01 -41.95 234.81 -40.01Q238.61 -38.08 241.04 -33.97Q243.48 -29.87 243.78 -23.33L240.74 -28.2V-55.48H248.04V0H242.26V-18.01H244.39Q244.08 -11.1 241.5 -6.8Q238.92 -2.51 235 -0.57Q231.09 1.37 226.6 1.37ZM227.59 -5.02Q231.32 -5.02 234.36 -6.69Q237.4 -8.36 239.22 -11.51Q241.04 -14.67 241.04 -18.92V-22.42Q241.04 -26.6 239.18 -29.53Q237.32 -32.45 234.24 -34.01Q231.16 -35.57 227.52 -35.57Q223.49 -35.57 220.41 -33.67Q217.33 -31.77 215.62 -28.35Q213.91 -24.93 213.91 -20.29Q213.91 -15.66 215.66 -12.2Q217.41 -8.74 220.52 -6.88Q223.64 -5.02 227.59 -5.02Z M276.77 1.37Q271.45 1.37 267.58 -0.46Q263.7 -2.28 261.27 -5.28Q258.84 -8.28 257.66 -12.01Q256.48 -15.73 256.48 -19.61V-20.98Q256.48 -24.93 257.66 -28.65Q258.84 -32.38 261.27 -35.38Q263.7 -38.38 267.46 -40.17Q271.22 -41.95 276.32 -41.95Q282.93 -41.95 287.22 -39.1Q291.52 -36.25 293.61 -31.77Q295.7 -27.28 295.7 -22.19V-18.92H259.67V-24.4H290.38L288.7 -21.43Q288.7 -25.76 287.34 -28.92Q285.97 -32.07 283.23 -33.82Q280.5 -35.57 276.32 -35.57Q271.98 -35.57 269.13 -33.59Q266.28 -31.62 264.88 -28.2Q263.47 -24.78 263.47 -20.29Q263.47 -15.96 264.88 -12.5Q266.28 -9.04 269.25 -7.03Q272.21 -5.02 276.77 -5.02Q281.56 -5.02 284.56 -7.14Q287.56 -9.27 288.17 -12.08H295.01Q294.18 -7.9 291.67 -4.86Q289.16 -1.82 285.36 -0.23Q281.56 1.37 276.77 1.37Z M303.53 0V-40.58H309.31V-23.86H309Q309 -32.76 312.92 -36.9Q316.83 -41.04 324.66 -41.04H326.03V-34.5H323.44Q317.36 -34.5 314.1 -31.27Q310.83 -28.04 310.83 -21.96V0Z" /></symbol>
+        <symbol id="icon" viewBox="0 0 512 512">
+          <rect width="512" height="512" rx="112" fill="#1c3d31" />
+          <g transform="translate(96 96) scale(2.5)" fill="#F4F1EA">
+            <circle cx="64" cy="64" r="54" fill="none" stroke="#F4F1EA" stroke-width="6" />
+            <circle cx="64" cy="64" r="33" fill="none" stroke="#F4F1EA" stroke-width="6" />
+            <circle cx="97.3" cy="36" r="5" />
+            <circle cx="23.1" cy="78.9" r="5" />
+            <circle cx="78.9" cy="104.9" r="5" />
+            <circle cx="64" cy="64" r="11" fill="#1FA35C" />
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="top">
+      <div class="wrap top-row">
+        <a class="logo" href="#" aria-label="Bizfinder, back to the top">
+          <svg class="logo-icon" aria-hidden="true"><use href="#icon" /></svg>
+          <svg class="logo-word" aria-hidden="true"><use href="#wordmark" /></svg>
+        </a>
+        <nav class="top-nav" aria-label="Page">
+          <a href="#demo">Demo</a>
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+        </nav>
+        <div class="top-actions">
+          <a class="top-link" href="signin.html" data-signed-out>Sign in</a>
+          <a class="btn btn-green btn-sm" href="request-access.html" data-signed-out>Request access</a>
+          <a class="btn btn-green btn-sm" href="app/" data-signed-in hidden>Open Bizfinder</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ Hero ============ -->
+      <section class="hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow-pill"><span class="live-dot"></span>Private beta · invite only</p>
+            <h1>Find the businesses that still need a&nbsp;website.</h1>
+            <p class="lead">
+              Bizfinder searches Google&nbsp;Maps or TomTom for any kind of business in a city, visits the websites
+              it finds for emails and social media, and gives you a spreadsheet and a call list to work through.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-green btn-lg" href="request-access.html" data-signed-out>Request access</a>
+              <a class="btn btn-green btn-lg" href="app/" data-signed-in hidden>Open Bizfinder</a>
+              <a class="btn btn-ghost btn-lg" href="#demo">
+                Try the demo
+                <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" /></svg>
+              </a>
+            </div>
+            <ul class="hero-facts">
+              <li>Google Maps or TomTom data</li>
+              <li>Excel and CSV export</li>
+              <li>Notes on every call</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <!-- A search, then a sweep that finds businesses around you -->
+            <div class="radar" data-radar aria-hidden="true">
+              <div class="radar-field"></div>
+              <div class="radar-beam"></div>
+              <svg class="radar-logo" viewBox="0 0 480 480">
+                <circle class="radar-range" cx="240" cy="240" r="236" />
+                <circle class="radar-range" cx="240" cy="240" r="180" />
+                <circle class="radar-range" cx="240" cy="240" r="128" />
+                <path class="radar-cross" d="M240 4v472M4 240h472" />
+                <circle class="logo-ring" cx="240" cy="240" r="92" />
+                <circle class="logo-ring" cx="240" cy="240" r="56" />
+                <g class="logo-moons">
+                  <circle cx="296.6" cy="192.4" r="8.5" />
+                  <circle cx="170.5" cy="265.3" r="8.5" />
+                  <circle cx="265.3" cy="309.5" r="8.5" />
+                </g>
+                <circle class="logo-core" cx="240" cy="240" r="19" />
+              </svg>
+              <span class="radar-ping"></span>
+              <span class="radar-ping radar-ping-2"></span>
+              <div class="radar-pins"></div>
+            </div>
+
+            <div class="float-card search-card">
+              <div class="search-field">
+                <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+                <span class="search-query"><span data-query>flower shop</span><span class="caret"></span></span>
+              </div>
+              <div class="search-where">
+                <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.5" />
+                </svg>
+                Tbilisi, Georgia
+              </div>
+            </div>
+
+            <div class="float-card found-card">
+              <span class="found-num" data-found>0</span>
+              <span class="found-text">businesses found<br /><b data-need>0</b> need a website</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Demo of the app ============ -->
+      <section class="demo-section" id="demo" aria-labelledby="demo-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">The app</p>
+            <h2 id="demo-title">Every business in one list. Click around.</h2>
+            <p>
+              This is the Bizfinder app, filled with made-up businesses. Switch views, filter by web presence, and open a
+              business to log a call.
+            </p>
+          </div>
+
+          <div class="window reveal" data-demo>
+            <div class="window-bar">
+              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window-url">Bizfinder</span>
+              <span class="window-tag">Demo · made-up businesses</span>
+            </div>
+            <div class="app">
+              <aside class="app-side" aria-label="Saved searches (demo)">
+                <div class="app-brand">
+                  <svg class="app-brand-icon" aria-hidden="true"><use href="#icon" /></svg>
+                  <svg class="app-brand-word" aria-hidden="true"><use href="#wordmark" /></svg>
+                </div>
+                <span class="app-new">
+                  <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+                  New search
+                </span>
+                <p class="app-side-head">Saved searches</p>
+                <ul class="app-saved">
+                  <li class="is-on"><b>flower shop</b><span>Tbilisi · 12 found · Google</span></li>
+                  <li><b>dentist</b><span>Tbilisi · 18 found · TomTom</span></li>
+                  <li><b>beauty salon</b><span>Batumi · 9 found · Google</span></li>
+                  <li><b>car repair</b><span>Kutaisi · 14 found · Google</span></li>
+                </ul>
+              </aside>
+
+              <div class="app-main">
+                <p class="app-eyebrow">Google Maps · sample search</p>
+                <h3 class="app-title">flower shop <span>in Tbilisi, Georgia</span></h3>
+                <div class="app-tiles" data-tiles></div>
+                <div class="app-tabs" role="tablist" aria-label="View">
+                  <button type="button" role="tab" data-tab="table" aria-selected="true">
+                    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M3 10h18M9 10v10" /></svg>
+                    Table
+                  </button>
+                  <button type="button" role="tab" data-tab="map" aria-selected="false">
+                    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4-6 2v14l6-2 6 2 6-2V4l-6 2-6-2ZM9 4v14M15 6v14" /></svg>
+                    Map
+                  </button>
+                  <button type="button" role="tab" data-tab="summary" aria-selected="false">
+                    <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
+                    Summary
+                  </button>
+                </div>
+                <div class="app-chips" data-chips role="group" aria-label="Show"></div>
+                <div class="app-view" data-view aria-live="polite"></div>
+              </div>
+
+              <aside class="app-drawer" data-drawer aria-label="Business details (demo)"></aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Features ============ -->
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">What it does</p>
+            <h2 id="features-title">From “flower shop in Tbilisi” to a list you can call.</h2>
+          </div>
+
+          <div class="bento">
+            <article class="card card-wide reveal">
+              <div class="card-text">
+                <h3>Any business, any city</h3>
+                <p>
+                  Type what you're looking for, in English and Georgian, and where. Bizfinder asks the map service and
+                  sets aside the loosely related places maps pad their answers with, like malls in a flower-shop
+                  search, on a sheet of their own.
+                </p>
+              </div>
+              <div class="viz viz-filter" aria-hidden="true">
+                <span class="vf-row is-keep"><i class="dot dot-none"></i>Bloom Corner <em>Florist</em></span>
+                <span class="vf-row is-drop"><i class="dot"></i>City Mall <em>Shopping mall</em></span>
+                <span class="vf-row is-keep"><i class="dot dot-social"></i>Petal &amp; Stem <em>Florist</em></span>
+                <span class="vf-row is-drop"><i class="dot"></i>Fresh Market <em>Supermarket</em></span>
+                <span class="vf-row is-keep"><i class="dot dot-own"></i>Rosa Studio <em>Florist</em></span>
+              </div>
+            </article>
+
+            <article class="card reveal">
+              <div class="viz viz-grid" aria-hidden="true">
+                <i style="--n: 0"></i><i style="--n: 1"></i><i style="--n: 2"></i><i style="--n: 3"></i><i style="--n: 4"></i><i style="--n: 5"></i><i style="--n: 6"></i><i style="--n: 7"></i><i style="--n: 15"></i><i style="--n: 14"></i><i style="--n: 13"></i><i style="--n: 12"></i><i style="--n: 11"></i><i style="--n: 10"></i><i style="--n: 9"></i><i style="--n: 8"></i>
+              </div>
+              <h3>The whole city, box by box</h3>
+              <p>
+                Google returns at most 60 places per search. Bizfinder can split a big city into smaller areas and search
+                each one, so you get hundreds.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="viz viz-social" aria-hidden="true">
+                <span>FB</span><span>IG</span><span>in</span><span>X</span><span>TT</span><span>YT</span><span>WA</span><span>TG</span>
+                <span class="viz-mail">info@…</span>
+              </div>
+              <h3>Emails and social pages</h3>
+              <p>
+                It visits each business's own website and collects email addresses and links to Facebook, Instagram,
+                LinkedIn, X, TikTok, YouTube, WhatsApp and Telegram.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="viz viz-kinds" aria-hidden="true">
+                <span><i class="dot dot-none"></i>No website</span>
+                <span><i class="dot dot-social"></i>Social page only</span>
+                <span><i class="dot dot-broken"></i>Broken website</span>
+                <span><i class="dot dot-own"></i>Own website</span>
+              </div>
+              <h3>See who needs a website</h3>
+              <p>
+                Every business is sorted by web presence. One click shows only the ones with no site, just a social page,
+                or a site that's down.
+              </p>
+            </article>
+
+            <article class="card reveal">
+              <div class="viz viz-sheet" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <h3>A spreadsheet to keep</h3>
+              <p>
+                Each search is saved as an Excel file with a Summary sheet and charts, or as CSV, ready to open in Google
+                Sheets.
+              </p>
+            </article>
+
+            <article class="card card-wide card-dark reveal">
+              <div class="card-text">
+                <h3>A call list that remembers</h3>
+                <p>
+                  Log how each call went, how you got in touch, what they said and what to say better next time. Notes
+                  save as you type, every call is kept with its date, and the next business is one key away.
+                </p>
+              </div>
+              <div class="viz viz-calls" aria-hidden="true" data-call-cycle>
+                <span>No answer</span><span>Call back</span><span>Interested</span><span>Somewhat interested</span
+                ><span>Client</span><span>Not interested</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ How it works ============ -->
+      <section class="how" id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="kicker">How it works</p>
+            <h2 id="how-title">Three steps, a few minutes.</h2>
+          </div>
+
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step-num">1</span>
+              <h3>Search</h3>
+              <p>Pick Google Maps or TomTom, type the kind of business and the city, and press Start.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">2</span>
+              <h3>Collect</h3>
+              <p>Bizfinder finds the businesses, then visits their websites. You watch it happen live.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">3</span>
+              <h3>Call</h3>
+              <p>Choose “Needs a website” and “Not called yet”, open the first one, and work down the list.</p>
+            </li>
+          </ol>
+
+          <div class="job reveal" aria-hidden="true" data-job>
+            <div class="job-head">
+              <div>
+                <p class="job-title">Searching for dentist in Tbilisi, Georgia</p>
+                <p class="job-sub">Google Maps · whole area, part by part</p>
+              </div>
+              <span class="job-stop">Stop and save</span>
+            </div>
+            <div class="job-steps">
+              <div class="job-step" data-step="0"><span class="job-dot"></span><b>Find businesses</b><small data-step-text>0 found</small></div>
+              <div class="job-step" data-step="1"><span class="job-dot"></span><b>Visit websites</b><small data-step-text>waiting</small></div>
+              <div class="job-step" data-step="2"><span class="job-dot"></span><b>Save spreadsheet</b><small data-step-text>waiting</small></div>
+            </div>
+            <div class="job-bar"><i data-job-bar></i></div>
+            <pre class="job-log" data-job-log></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Invite only ============ -->
+      <section class="local" id="access" aria-labelledby="access-title">
+        <div class="wrap local-grid">
+          <div class="reveal">
+            <p class="kicker kicker-light">Invite only</p>
+            <h2 id="access-title">Private, by invitation.</h2>
+            <p>Bizfinder is in private beta. Request access, and you’ll get an invite by email when there’s room.</p>
+            <div class="local-cta">
+              <a class="btn btn-green btn-lg" href="request-access.html" data-signed-out>Request access</a>
+              <a class="btn btn-ghost btn-lg" href="signin.html" data-signed-out>Sign in</a>
+              <a class="btn btn-green btn-lg" href="app/" data-signed-in hidden>Open Bizfinder</a>
+            </div>
+          </div>
+          <ul class="local-list reveal">
+            <li>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+              <div><b>Your lists stay yours.</b> Searches and call notes are saved to your account, for you alone.</div>
+            </li>
+            <li>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M8 20h8M12 16v4" /></svg>
+              <div><b>Nothing to install.</b> Sign in from your browser and start a search.</div>
+            </li>
+            <li>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
+              <div><b>Take it with you.</b> Download any search as an Excel file or CSV.</div>
+            </li>
+            <li>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" /></svg>
+              <div><b>Made for calling.</b> Work down the list, and every note is waiting when you call back.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-row">
+        <a class="logo" href="#" aria-label="Bizfinder, back to the top">
+          <svg class="logo-icon" aria-hidden="true"><use href="#icon" /></svg>
+          <svg class="logo-word" aria-hidden="true"><use href="#wordmark" /></svg>
+        </a>
+        <p>
+          © 2026 Bizfinder · <a href="signin.html">Sign in</a> · <a href="request-access.html">Request access</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
