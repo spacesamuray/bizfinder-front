@@ -19,11 +19,6 @@
     return;
   }
 
-  // Preview notes: shown while there's no real backend (or nowhere to send requests)
-  document.querySelectorAll('[data-preview]').forEach((el) => {
-    el.hidden = el.dataset.preview === 'requests' ? !!Auth.REQUEST_ACCESS_URL : !Auth.PREVIEW;
-  });
-
   // An email in the link fills the form in (an invite link always has one)
   const email = params.get('email');
   if (email && form.email) {

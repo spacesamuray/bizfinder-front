@@ -1,6 +1,5 @@
 // The Bizfinder app as a web service: only for people who are signed in. Adds the account
-// panel (who's signed in, Sign out) and, in the preview, a "Sample data" note. Runs before
-// the app, from <head>.
+// panel (who's signed in, Sign out). Runs before the app, from <head>.
 (function () {
   const Auth = window.BizfinderAuth;
   const user = Auth.user();
@@ -20,13 +19,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const side = document.querySelector('.side');
-    if (Auth.PREVIEW) {
-      const note = document.createElement('p');
-      note.className = 'preview-tag';
-      note.title = 'Every business here is made up. Searches and notes stay in this browser.';
-      note.innerHTML = '<span class="preview-dot"></span>Preview · sample data';
-      side.querySelector('.brand').after(note);
-    }
     const panel = document.createElement('div');
     panel.className = 'account';
     panel.innerHTML = `<span class="account-avatar" aria-hidden="true">${esc(initials)}</span>

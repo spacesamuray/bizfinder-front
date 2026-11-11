@@ -2858,15 +2858,6 @@ html:not(.js) .viz-sheet i {
   }
 }
 
-.preview-note {
-  margin-top: 22px;
-  padding: 12px 14px;
-  border: 1px dashed var(--line-strong);
-  border-radius: 10px;
-  color: var(--ink-2);
-  font-size: 13.5px;
-}
-
 @media (max-width: 900px) {
   .auth {
     grid-template-columns: minmax(0, 1fr);

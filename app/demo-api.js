@@ -241,7 +241,6 @@ window.BizfinderDemo = (function () {
     const quoted = job.queries.map((q) => `“${q}”`).join(', ');
     const lines = [
       [0, 'info', `Searching ${job.source} for ${quoted} in ${job.location}`],
-      [0.3, 'warning', `Preview: this search shows sample businesses in ${job.where}. All of them are made up.`],
       [SEARCH_S * 0.45, 'info', `${Math.round(job.total * 0.5)} found so far`],
       [SEARCH_S, 'info', `Found ${job.total} places${job.others ? `, ${job.others} of them don't look like a match` : ''}`],
     ];

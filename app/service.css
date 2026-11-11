@@ -1,27 +1,5 @@
-/* The web version's additions to the app: the account panel and the preview note.
+/* The web version's additions to the app: the account panel.
    Uses the app's own colours (app.css), so light and dark both work. */
-
-.preview-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  align-self: flex-start;
-  margin: -4px 6px 0;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent-text);
-  font-size: 12px;
-  font-weight: 600;
-  cursor: help;
-}
-
-.preview-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-}
 
 .account {
   display: flex;
